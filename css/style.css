@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bluePale: #04a;
+    --sand: #00ff00
+}
+
+.banner{
+    height: 100vh;
+    background-image: url(../imagens/WhatsApp\ Image\ 2023-07-11\ at\ 22.44.46.jpeg) ;
+    background-color: rgba(0, 0, 0, 0.5);
+}
