@@ -129,13 +129,13 @@ h3{
 
 .conteudo{
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .conteudo p{
     font-size: 25px;
-    width: 45%;
+    width: 60%;
+    text-align: justify;
     line-height: 44px;
     color: #001a42;
     font-weight: 600;
@@ -143,7 +143,7 @@ h3{
 }
 
 #about-me img{
-    width: 500px;
+    width: 40%;
     padding-left: 100px;
 }
 
@@ -163,7 +163,7 @@ body{
 }
 
 ul li img{
-    background-image: linear-gradient(#0066ff, #00a3ff, var(--corBranca));
+    background-image: radial-gradient(circle, #00a3ff, #0066ff );
     border-radius: 50%;
     width: 150px;
 }
@@ -182,7 +182,7 @@ li::after{
     z-index: -1;
     width: calc(100% + 40px);
     height: calc(100% + 40px);
-    background: linear-gradient(#0066ff, #00a3ff, var(--corBranca));
+    background: radial-gradient(circle, #0066ff, #00a3ff, var(--corBranca));
     border-radius: 50%;
     filter: blur(10px);
 }
