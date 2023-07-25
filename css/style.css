@@ -108,15 +108,16 @@ span{
 
 /* area about me */
 
-#about-me, #skills{
+#about-me, #skills, #portfolio{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     text-align: center;
     padding: 9.5vh 220px;
 }
 
 #about-me{
     background-color: #fff;
+    height: 100vh;
 }
 
 h3{
@@ -152,7 +153,8 @@ body{
 }
 
 #skills{
-    padding: 9.5vh 120px;
+    padding-top: 9.5vh;
+    height: 100%;
 }
 
 #skills ul{
@@ -160,16 +162,17 @@ body{
     justify-content: space-evenly;
     list-style: none;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 ul li img{
     background-image: radial-gradient(circle, #00a3ff, #0066ff );
     border-radius: 50%;
-    width: 150px;
+    width: 120px;
 }
 
 li{
-    width: 150px;
+    width: 120px;
     position: relative;
     border-radius: 50%;
 }
@@ -177,14 +180,144 @@ li{
 li::after{
     content: "";
     position: absolute;
-    top: -20px;
-    right: -20px;
+    top: -5px;
+    right: -5px;
     z-index: -1;
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
     background: radial-gradient(circle, #0066ff, #00a3ff, var(--corBranca));
     border-radius: 50%;
     filter: blur(10px);
+    transition: all 0.6s ease;
+}
+
+li:hover::after{
+    transform: scale(1.2, 1.2);
+}
+
+.soft-skills{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10vh;
+    text-align: center;
+}
+
+.soft-skills h4{
+    font-size: 50px;
+    color: #0066ff;
+    margin-bottom: 10vh;
+}
+
+.conteudo-slide{
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 300px;
+    padding: 60px 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.conteudo-slide img{
+    width:auto;
+}
+
+.conteudo-slide .content{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 60px;
+    color: #031024;
+}
+
+.content h5{
+    font-size: 30px;
+}
+
+.content p{
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+/* estilos slide skills */
+
+.slider{
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 20px 10px 15px #0159de9e;
+}
+
+.slide-content{
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+.slide-content input{
+    display: none;
+}
+
+.slide-box{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.slide-box .conteudo-slide{
+    width: 100%;
+}
+
+.nav-manual, .nav-auto{
+    position: absolute;
+    width: 50%;
+    margin-top: 17.5%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+    border: 2px solid #0066ff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+    margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover{
+    background-color: #0066ff;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1,
+#radio2:checked ~ .nav-auto .auto-btn2,
+#radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: #0066ff;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
 }
 
 
+#portfolio{
+    background-color: #f1f1f1;
+    height: 100vh;
+}
